@@ -1,0 +1,28 @@
+import { Review } from "@prisma/client";
+import { Stars } from "../../../components";
+
+export default function RReviewCard({review}: {review: Review}) {
+  return (
+    <div className="border-b pb-7 mb-7">
+      <div className="flex gap-10">
+        <div className="w-1/6 flex flex-col items-center gap-1">
+          <div className="rounded-full bg-blue-400 w-16 h-16 flex items-center justify-center">
+            <h2 className="text-white text-2xl uppercase">{review.first_name[0]}{review.last_name[0]}</h2>
+          </div>
+          <p className="text-sm text-center">{review.first_name} {review.last_name}</p>
+          <div className="flex">
+            <span className="text-sm text-light">1 review</span>
+          </div>
+        </div>
+        <div className="w-5/6">
+          <div className="flex items-center gap-5">
+            <Stars rating={review.rating} reviews={[]} />
+          </div>
+          <div className="mt-5">
+            <p className="text-lg font-light">{review.text}</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  )
+}

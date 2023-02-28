@@ -1,0 +1,11 @@
+export { default as RHeader } from './RHeader';
+export { default as RNavBar } from './RNavBar';
+export { default as RTitle } from './RTitle';
+export { default as RRating } from './RRating';
+export { default as RDescription } from './RDescription';
+export { default as RImages } from './RImages';
+export { default as RReviews } from './RReviews';
+export { default as RReservationCard } from './RReservationCard';
+export { default as RMenu } from './RMenu';
+export { default as RMenuCard } from './RMenuCard';
+export { default as RReviewCard } from './RReviewCard';
